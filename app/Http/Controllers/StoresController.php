@@ -25,7 +25,7 @@ class StoresController extends Controller
      */
     public function create()
     {
-        //
+        return view('stores.create');
     }
 
     /**
@@ -36,7 +36,11 @@ class StoresController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $params = $request->validate([
+          'name' => 'required|max:50',
+        ]);
+        Store::create($params);
+        return redirect()->route('top');
     }
 
     /**

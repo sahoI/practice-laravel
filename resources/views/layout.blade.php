@@ -18,6 +18,11 @@
             Laravel BBS
         </a>
     </div>
+    <div class="mb-4">
+        <a href="{{ route('stores.create') }}" class="btn btn-primary">
+            店を新規登録する
+        </a>
+    </div>
 </header>
 
 <div>
