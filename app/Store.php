@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+// nameをuniqueにする
+
 class Store extends Model
 {
   protected $fillable = [

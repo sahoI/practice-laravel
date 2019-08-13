@@ -4,9 +4,12 @@
     <div class="containew mt-4">
         @foreach ($stores as $store)
             <div class="card mb-4">
+                <a class="card-link" href="{{route('stores.show',['store' => $store])}}">
                 <div class="card-header">
                     {{ $store->name }}
                 </div>
+                    {{--商品を見る--}}
+                </a>
                 <div class="card-body">
                     {{--<p class="card-text">--}}
                         {{--{!! nl2br(e(str_limit($store->body, 200))) !!}--}}

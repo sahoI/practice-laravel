@@ -46,12 +46,17 @@ class StoresController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $store_id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        $store = Store::findOrFail($id);
+
+        return view('stores.show',
+          [
+            'store' => $store,
+          ]);
     }
 
     /**
