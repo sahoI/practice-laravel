@@ -17,3 +17,4 @@
 
 Route::get('/','StoresController@index')->name('top');
 Route::resource('stores', 'StoresController', ['only' => ['create', 'store', 'show']]);
+Route::resource('items', 'ItemsController', ['only' => ['create', 'store', 'show']]);

@@ -23,6 +23,11 @@
             店を新規登録する
         </a>
     </div>
+    <div class="mb-4">
+        <a href="{{ route('items.create') }}" class="btn btn-primary">
+            商品を新規登録する
+        </a>
+    </div>
 </header>
 
 <div>
