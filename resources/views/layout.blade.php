@@ -15,18 +15,21 @@
 <header class="navbar navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="{{ url('') }}">
-            Laravel BBS
+            Laravel BBSp
         </a>
     </div>
     <div class="mb-4">
-        <a href="{{ route('stores.create') }}" class="btn btn-primary">
-            店を新規登録する
+        <a href="{{ route('posts.create') }}" class="btn btn-primary">
+            投稿を新規登録する
         </a>
+        {{--<a href="{{ route('stores.create') }}" class="btn btn-primary">--}}
+            {{--店を新規登録する--}}
+        {{--</a>--}}
     </div>
     <div class="mb-4">
-        <a href="{{ route('items.create') }}" class="btn btn-primary">
-            商品を新規登録する
-        </a>
+        {{--<a href="{{ route('items.create') }}" class="btn btn-primary">--}}
+            {{--商品を新規登録する--}}
+        {{--</a>--}}
     </div>
 </header>
 

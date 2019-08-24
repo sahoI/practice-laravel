@@ -15,6 +15,13 @@
 //    return view('welcome');
 //});
 
-Route::get('/','StoresController@index')->name('top');
-Route::resource('stores', 'StoresController', ['only' => ['create', 'store', 'show']]);
-Route::resource('items', 'ItemsController', ['only' => ['create', 'store', 'show']]);
+Route::get('/','PostsController@index')->name('top');
+Route::resource('posts', 'PostsController', ['only' => ['create', 'store','show', 'edit', 'update','destroy']]);
+Route::resource('comments', 'CommentsController', ['only' => ['store','edit','update']]);
+
+
+
+
+//Route::get('/','StoresController@index')->name('top');
+//Route::resource('stores', 'StoresController', ['only' => ['create', 'store', 'show']]);
+//Route::resource('items', 'ItemsController', ['only' => ['create', 'store', 'show']]);

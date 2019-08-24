@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use function foo\func;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        \DB::listen(function ($query)
+        {
+          $sql = $query->sql;
+          for($i = 0; $i < count($query->bindings); $i++)
+          {
+            $sql = preg_replace("/\?/", $query->bindings[$i], $sql, 1);
+          }
+          \Log::info($sql);
+        });
     }
 }
